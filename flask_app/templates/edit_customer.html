@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Bootstrap style link-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <!-- CSS global styles-->
+    <link rel="stylesheet" href="{{ url_for('static', filename='main.css') }}">
+    <title>Edit Customer Account</title>
+</head>
+<body>
+    <div class="content-wrapper">
+        <h1>Edit Customer Account</h1>
+        <!--Form to edit account-->
+        <form action="/select/{{customer.id}}/update" method = "POST">
+            <div class="form-group">
+                <label for="first_name">First name:</label>
+                <input type="text" name="first_name" class="form-control" value="{{customer.first_name}}">
+            </div>
+            <div class="form-group">
+                <label for="last_name">Last name:</label>
+                <input type="text" name="last_name" class="form-control" value="{{customer.last_name}}">
+            </div>
+            <div class="form-group">
+                <label for="last_name">Email Address:</label>
+                <input type="text" name="email_address" class="form-control" value="{{customer.email_address}}">
+            </div>
+        <button type="submit" class="btn btn-dark">Submit</button>
+        </form>
+    </div><!--End content-wrappper-->
+</body>
+</html>

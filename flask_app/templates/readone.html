@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Bootstrap style link-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <!-- CSS global styles-->
+    <link rel="stylesheet" href="{{ url_for('static', filename='main.css') }}">
+    <title>Customer Account</title>
+</head>
+<body>
+    <div class="content-wrapper">
+    <h1>Customer #{{customer.id}}</h1>
+    <table class="table table-hover table-dark">
+        <caption>account details</caption>
+            <thead>
+                <tr scope="row">
+                    <th scope="col">Id</th>
+                    <th scope="col">First Name</th>
+                    <th scope="col">Last Name</th>
+                    <th scope="col">Email Address</th>
+                    <th scope="col">Updated At</th>
+                    <th scope="col">Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr scope="row">
+                    <td scope="col">{{customer.id}}</td>
+                    <td scope="col">{{customer.first_name}}</td>
+                    <td scope="col">{{customer.last_name}}</td>
+                    <td scope="col">{{customer.email_address}}</td>
+                    <td scope="col">{{customer.updated_at}}</td>
+                    <td scope="col">
+                        <a href="/select/{{customer.id}}/edit" class="btn btn-warning">Edit</a>
+                        <a href="/select/{{customer.id}}/delete" class="btn btn-danger">Delete</a>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="card-wrapper">
+            <div class="row">
+                <div class="col-sm-5">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">New Customer</h5>
+                            <p class="card-text">Enter customer into account database.</p>
+                            <a href="/form" class="btn btn-dark">Add Customer</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-5">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Account Database</h5>
+                            <p class="card-text">View customer accounts.</p>
+                            <a href="/list_customers" class="btn btn-dark">View Database</a>
+                        </div>
+                    </div>
+                </div>
+            </div><!--End card row-->
+        </div><!--End card-wrapper-->
+    </div><!--End content-wrapper--> 
+</body>
+</html>

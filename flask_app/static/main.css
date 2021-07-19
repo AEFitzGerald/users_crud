@@ -1,0 +1,16 @@
+body,
+.content-wrapper {
+    margin: 0 auto;
+}
+
+h1 {
+    padding: 50px;
+}
+
+.content-wrapper {
+    width: 80%;
+}
+
+.card-wrapper {
+    padding: 50px;
+}

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Bootstrap style link-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <!-- CSS global styles-->
+    <link rel="stylesheet" href="{{ url_for('static', filename='main.css') }}">
+    <title>Customer Database</title>
+</head>
+<body>
+    <div class="content-wrapper card-wrapper">
+        <h1>Customer Database</h1>
+        <div class="row">
+            <div class="col-sm-5">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">New Customer</h5>
+                        <p class="card-text">Enter customer into account database.</p>
+                        <a href="/form" class="btn btn-dark">Add Customer</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-5">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Account Database</h5>
+                        <p class="card-text">View customer accounts.</p>
+                        <a href="/list_customers" class="btn btn-dark">View Database</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div><!--End content-wrapper -->   
+</body>
+</html>
