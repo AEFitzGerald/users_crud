@@ -57,7 +57,7 @@ def update_customer(customer_id):
         'email_address': request.form['email_address']   
     }
     Customer.update_one(data)
-    return redirect(f"/select/{customer_id}/show"))
+    return redirect(f"/select/{customer_id}/show")
 
 
 @app.route('/select/<int:customer_id>/delete')
